@@ -1,951 +1,875 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>B. Lokesh | Software Developer</title>
+  <title>B. Lokesh | Software Developer</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, sans-serif;
-    background:#0b1120;
-    color:#fff;
-    line-height:1.6;
-}
-
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:1000;
-    background:rgba(11,17,32,0.95);
-    border-bottom:1px solid #26324a;
-}
-
-nav{
-    max-width:1150px;
-    margin:auto;
-    padding:18px 25px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-size:25px;
-    font-weight:bold;
-}
-
-.logo span{
-    color:#38bdf8;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:25px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#38bdf8;
-}
-
-section{
-    max-width:1150px;
-    margin:auto;
-    padding:100px 25px;
-}
-
-#home{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:50px;
-}
-
-.hero-text{
-    flex:1;
-}
-
-.hero-text h1{
-    font-size:55px;
-    margin-bottom:10px;
-}
-
-.hero-text h1 span{
-    color:#38bdf8;
-}
-
-.hero-text h2{
-    font-size:30px;
-    color:#94a3b8;
-    margin-bottom:20px;
-}
-
-.hero-text p{
-    max-width:650px;
-    color:#cbd5e1;
-    font-size:18px;
-}
-
-.buttons{
-    margin-top:30px;
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:13px 22px;
-    border-radius:8px;
-    background:#38bdf8;
-    color:#06111f;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-}
-
-.btn-outline{
-    background:transparent;
-    color:#38bdf8;
-    border:1px solid #38bdf8;
-}
-
-.profile{
-    width:280px;
-    height:280px;
-    border-radius:50%;
-    overflow:hidden;
-    border:5px solid #38bdf8;
-    flex-shrink:0;
-}
-
-.profile img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-}
-
-.title{
-    font-size:38px;
-    margin-bottom:35px;
-    color:#38bdf8;
-}
-
-.about-text{
-    color:#cbd5e1;
-    font-size:18px;
-    max-width:900px;
-}
-
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
-}
-
-.skill{
-    padding:12px 18px;
-    background:#172033;
-    border:1px solid #2c3b55;
-    border-radius:8px;
-    color:#e2e8f0;
-}
-
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:#111a2c;
-    border:1px solid #26344e;
-    padding:25px;
-    border-radius:12px;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    border-color:#38bdf8;
-}
-
-.card h3{
-    color:#38bdf8;
-    margin-bottom:12px;
-}
-
-.card p{
-    color:#cbd5e1;
-}
-
-.tech{
-    margin-top:15px;
-    color:#94a3b8;
-    font-size:14px;
-}
-
-.timeline{
-    border-left:3px solid #38bdf8;
-    padding-left:25px;
-}
-
-.timeline-item{
-    margin-bottom:30px;
-}
-
-.timeline-item h3{
-    color:#38bdf8;
-}
-
-.timeline-item p{
-    color:#cbd5e1;
-}
-
-.certifications{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.contact-box{
-    background:#111a2c;
-    border:1px solid #26344e;
-    padding:30px;
-    border-radius:12px;
-}
-
-.contact-box p{
-    margin:12px 0;
-    color:#cbd5e1;
-}
-
-.contact-box a{
-    color:#38bdf8;
-    text-decoration:none;
-}
-
-footer{
-    text-align:center;
-    padding:30px;
-    border-top:1px solid #26324a;
-    color:#94a3b8;
-}
-
-/* CHATBOT */
-
-.chat-button{
-    position:fixed;
-    right:25px;
-    bottom:25px;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    border:none;
-    background:#38bdf8;
-    color:#06111f;
-    font-size:25px;
-    cursor:pointer;
-    z-index:2000;
-}
-
-.chat-box{
-    position:fixed;
-    right:25px;
-    bottom:95px;
-    width:350px;
-    max-width:calc(100% - 40px);
-    height:480px;
-    background:#111a2c;
-    border:1px solid #38bdf8;
-    border-radius:15px;
-    display:none;
-    flex-direction:column;
-    overflow:hidden;
-    z-index:2000;
-    box-shadow:0 10px 40px rgba(0,0,0,0.5);
-}
-
-.chat-header{
-    background:#38bdf8;
-    color:#06111f;
-    padding:16px;
-    font-weight:bold;
-}
-
-.chat-messages{
-    flex:1;
-    padding:15px;
-    overflow-y:auto;
-}
-
-.message{
-    padding:10px;
-    margin-bottom:10px;
-    border-radius:8px;
-    max-width:85%;
-}
-
-.bot{
-    background:#1e293b;
-    color:#e2e8f0;
-}
-
-.user{
-    background:#38bdf8;
-    color:#06111f;
-    margin-left:auto;
-}
-
-.chat-input{
-    display:flex;
-    border-top:1px solid #26344e;
-}
-
-.chat-input input{
-    flex:1;
-    padding:14px;
-    border:none;
-    outline:none;
-    background:#0b1120;
-    color:white;
-}
-
-.chat-input button{
-    width:60px;
-    border:none;
-    background:#38bdf8;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-@media(max-width:800px){
-
-    nav ul{
-        display:none;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
-    #home{
-        flex-direction:column-reverse;
-        text-align:center;
-        justify-content:center;
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1120;
+      color: #ffffff;
+      line-height: 1.6;
     }
 
-    .hero-text h1{
-        font-size:42px;
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #111827;
+      padding: 15px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #243047;
     }
 
-    .hero-text h2{
-        font-size:24px;
+    nav h2 {
+      color: #38bdf8;
     }
 
-    .buttons{
-        justify-content:center;
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
     }
 
-    .profile{
-        width:220px;
-        height:220px;
+    nav ul li a {
+      color: white;
+      text-decoration: none;
     }
-}
-</style>
+
+    nav ul li a:hover {
+      color: #38bdf8;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .hero-text {
+      max-width: 650px;
+    }
+
+    .hero-text h1 {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h1 span {
+      color: #38bdf8;
+    }
+
+    .hero-text h2 {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      color: #94a3b8;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      background: #38bdf8;
+      color: #020617;
+      font-weight: bold;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid #38bdf8;
+    }
+
+    .profile {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #38bdf8;
+      flex-shrink: 0;
+      background: #111827;
+    }
+
+    .profile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 35px;
+      margin-bottom: 40px;
+      color: #38bdf8;
+    }
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 18px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card,
+    .project-card,
+    .edu-card,
+    .cert-card {
+      background: #111827;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #243047;
+    }
+
+    .skill-card h3,
+    .project-card h3,
+    .edu-card h3,
+    .cert-card h3 {
+      color: #38bdf8;
+      margin-bottom: 12px;
+    }
+
+    .skill-card p,
+    .project-card p,
+    .edu-card p,
+    .cert-card p {
+      color: #cbd5e1;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .education {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+      margin: 10px;
+    }
+
+    .contact a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #111827;
+      color: #94a3b8;
+    }
+
+    /* CHATBOT */
+
+    .chatbot {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      z-index: 2000;
+    }
+
+    .chat-button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: none;
+      background: #38bdf8;
+      color: #020617;
+      font-size: 25px;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    }
+
+    .chat-box {
+      display: none;
+      width: 350px;
+      height: 500px;
+      background: #111827;
+      border: 1px solid #334155;
+      border-radius: 15px;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      bottom: 75px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+
+    .chat-header {
+      background: #38bdf8;
+      color: #020617;
+      padding: 15px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chat-header button {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .chat-messages {
+      height: 380px;
+      padding: 15px;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin-bottom: 12px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      max-width: 85%;
+      white-space: pre-wrap;
+    }
+
+    .bot-message {
+      background: #1e293b;
+      color: #e2e8f0;
+    }
+
+    .user-message {
+      background: #38bdf8;
+      color: #020617;
+      margin-left: auto;
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #334155;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 13px;
+      border: none;
+      outline: none;
+      background: #0f172a;
+      color: white;
+    }
+
+    .chat-input button {
+      padding: 13px 18px;
+      border: none;
+      background: #38bdf8;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .hero-text h1 {
+        font-size: 40px;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .profile {
+        width: 220px;
+        height: 220px;
+      }
+
+      .chat-box {
+        width: calc(100vw - 30px);
+        right: -10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-<nav>
-    <div class="logo">Lokesh<span>.</span></div>
+  <!-- NAVIGATION -->
+  <nav>
+    <h2>Lokesh</h2>
 
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-</nav>
-</header>
+  </nav>
 
 
-<!-- HOME -->
-
-<section id="home">
+  <!-- HERO -->
+  <section class="hero">
 
     <div class="hero-text">
 
-        <h1>Hi, I'm <span>Lokesh</span></h1>
+      <h1>Hi, I'm <span>Lokesh</span></h1>
 
-        <h2>Software Developer</h2>
+      <h2>Software Developer</h2>
 
-        <p>
-            M.Sc. Computer Science graduate passionate about software
-            development, Python, databases, web technologies and
-            machine learning.
-        </p>
+      <p>
+        M.Sc. Computer Science graduate passionate about software development,
+        Python, machine learning, databases and web technologies.
+      </p>
 
-        <div class="buttons">
+      <div class="buttons">
 
-            <a class="btn" href="#projects">
-                View Projects
-            </a>
+        <a class="btn" href="#projects">
+          View Projects
+        </a>
 
-            <!-- YOUR NEW RESUME -->
-            <a class="btn btn-outline"
-               href="B_Lokesh_Resume.pdf"
-               target="_blank">
-                View Resume
-            </a>
+        <a class="btn secondary"
+           href="B_Lokesh_Resume.pdf"
+           target="_blank">
+          View Resume
+        </a>
 
-            <a class="btn btn-outline"
-               href="https://github.com/lokesh-003-pro"
-               target="_blank">
-                GitHub
-            </a>
+        <a class="btn secondary"
+           href="https://github.com/lokesh-003-pro"
+           target="_blank">
+          GitHub
+        </a>
 
-            <a class="btn btn-outline"
-               href="https://www.linkedin.com/in/lokesh-b-4785063b1/"
-               target="_blank">
-                LinkedIn
-            </a>
+        <a class="btn secondary"
+           href="https://www.linkedin.com/in/lokesh-b-4785063b1/"
+           target="_blank">
+          LinkedIn
+        </a>
 
-        </div>
+      </div>
 
     </div>
 
-
-    <!-- YOUR PHOTO -->
 
     <div class="profile">
+      <img src="profile.jpg" alt="B. Lokesh">
+    </div>
 
-        <img src="profile.jpg"
-             alt="B. Lokesh">
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+
+      <p>
+        I am B. Lokesh, an M.Sc. Computer Science graduate from Chennai,
+        India. I have knowledge of Python, C, C++, Java, web technologies,
+        SQL and MySQL. I am interested in software development and
+        machine learning projects.
+      </p>
 
     </div>
 
-</section>
+  </section>
 
 
-<!-- ABOUT -->
+  <!-- SKILLS -->
+  <section id="skills">
 
-<section id="about">
-
-    <h2 class="title">About Me</h2>
-
-    <p class="about-text">
-
-        I am B. Lokesh, an M.Sc. Computer Science graduate
-        from St. Thomas College of Arts & Science, Chennai.
-
-        I have a strong academic background and hands-on
-        experience in Python, Java, C, C++, SQL, MySQL,
-        HTML, CSS, JavaScript and machine learning.
-
-        I am interested in building useful software applications
-        and continuously improving my technical skills.
-
-    </p>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-    <h2 class="title">Technical Skills</h2>
+    <h2 class="section-title">Skills</h2>
 
     <div class="skills">
 
-        <div class="skill">Python</div>
-        <div class="skill">C</div>
-        <div class="skill">C++</div>
-        <div class="skill">Core Java</div>
-        <div class="skill">Advanced Java</div>
+      <div class="skill-card">
+        <h3>Programming</h3>
+        <p>Python, C, C++, Core Java, Advanced Java</p>
+      </div>
 
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">JSP</div>
-        <div class="skill">J2EE</div>
+      <div class="skill-card">
+        <h3>Web Technologies</h3>
+        <p>HTML, CSS, JavaScript, JSP, J2EE</p>
+      </div>
 
-        <div class="skill">SQL</div>
-        <div class="skill">MySQL</div>
+      <div class="skill-card">
+        <h3>Database</h3>
+        <p>SQL, MySQL</p>
+      </div>
 
-        <div class="skill">Machine Learning</div>
-        <div class="skill">Linear Regression</div>
-        <div class="skill">Isolation Forest</div>
+      <div class="skill-card">
+        <h3>Machine Learning</h3>
+        <p>Python, Linear Regression, Isolation Forest</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Tools</h3>
+        <p>VS Code, MS Office</p>
+      </div>
 
     </div>
 
-</section>
+  </section>
 
 
-<!-- PROJECTS -->
+  <!-- PROJECTS -->
+  <section id="projects">
 
-<section id="projects">
-
-    <h2 class="title">Projects</h2>
+    <h2 class="section-title">Projects</h2>
 
     <div class="projects">
 
-        <div class="card">
+      <div class="project-card">
 
-            <h3>Student Database Management System</h3>
-
-            <p>
-                A database management application designed
-                to manage student enrollment, subjects,
-                grading, class creation and automated
-                result generation.
-            </p>
-
-            <p class="tech">
-                Technologies: PHP, MySQL, JavaScript
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>AI-Based Weather Simulation</h3>
-
-            <p>
-                A machine learning project focused on
-                weather prediction, anomaly detection,
-                risk analysis and alerts for events such
-                as floods, heatwaves and storms.
-            </p>
-
-            <p class="tech">
-                Technologies: Python, Machine Learning,
-                Linear Regression, Isolation Forest
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Student Salary Prediction</h3>
-
-            <p>
-                A machine learning project developed to
-                predict salary using multiple input
-                features and data preprocessing techniques.
-            </p>
-
-            <p class="tech">
-                Technologies: Python, Pandas, NumPy,
-                Scikit-learn, Machine Learning
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- EDUCATION -->
-
-<section id="education">
-
-    <h2 class="title">Education</h2>
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-
-            <h3>M.Sc. Computer Science</h3>
-
-            <p>
-                St. Thomas College of Arts & Science, Chennai
-            </p>
-
-            <p>2024 – 2026</p>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <h3>B.Sc. Computer Science</h3>
-
-            <p>
-                St. Thomas College of Arts & Science, Chennai
-            </p>
-
-            <p>2021 – 2024</p>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <h3>HSC</h3>
-
-            <p>
-                Lamech Higher Secondary School, Chennai
-            </p>
-
-            <p>2020 – 2021</p>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <h3>SSLC</h3>
-
-            <p>
-                Sre Sasstha Matric. Hr. Sec. School
-            </p>
-
-            <p>2018 – 2019</p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CERTIFICATIONS -->
-
-<section id="certifications">
-
-    <h2 class="title">Certifications</h2>
-
-    <div class="certifications">
-
-        <div class="card">
-
-            <h3>Cybersecurity Analyst Job Simulation</h3>
-
-            <p>
-                Tata – Forage
-            </p>
-
-            <p class="tech">
-                IAM Fundamentals • IAM Strategy •
-                Custom Solutions • Platform Integration
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Master in Software Application</h3>
-
-            <p>
-                Apollo Computer Education Ltd.
-            </p>
-
-            <p class="tech">
-                Grade A+ • Python • Advanced Python •
-                Core Java • Advanced Java • J2EE • JSP •
-                HTML • CSS • JavaScript • MS Office
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-    <h2 class="title">Contact Me</h2>
-
-    <div class="contact-box">
+        <h3>Student Database Management System</h3>
 
         <p>
-            📧 Email:
-            <a href="mailto:lokeshmsc314@gmail.com">
-                lokeshmsc314@gmail.com
-            </a>
+          A database management system developed using PHP, MySQL and
+          JavaScript. It manages student enrollment, subjects and grading.
+          It includes class creation, subject assignment and automated
+          result generation.
         </p>
 
-        <p>
-            💻 GitHub:
-            <a href="https://github.com/lokesh-003-pro"
-               target="_blank">
-                github.com/lokesh-003-pro
-            </a>
-        </p>
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>AI-Based Weather Simulation</h3>
 
         <p>
-            🔗 LinkedIn:
-            <a href="https://www.linkedin.com/in/lokesh-b-4785063b1/"
-               target="_blank">
-                LinkedIn Profile
-            </a>
+          A machine learning project using Python, Linear Regression and
+          Isolation Forest for weather prediction and anomaly detection,
+          with risk analysis and alerts.
         </p>
 
+      </div>
+
+
+      <div class="project-card">
+
+        <h3>Student Salary Prediction</h3>
+
         <p>
-            📍 Chennai, India
+          A machine learning project focused on predicting salary using
+          student and career-related input features.
         </p>
+
+      </div>
 
     </div>
 
-</section>
+  </section>
 
 
-<!-- CHATBOT -->
+  <!-- EDUCATION -->
+  <section id="education">
 
-<div class="chat-box" id="chatBox">
+    <h2 class="section-title">Education</h2>
 
-    <div class="chat-header">
-        🤖 Ask Lokesh's Portfolio
+    <div class="education">
+
+      <div class="edu-card">
+
+        <h3>M.Sc. Computer Science</h3>
+
+        <p>
+          St. Thomas College of Arts & Science, Chennai
+        </p>
+
+        <p>2024 – 2026</p>
+
+      </div>
+
+
+      <div class="edu-card">
+
+        <h3>B.Sc. Computer Science</h3>
+
+        <p>
+          St. Thomas College of Arts & Science, Chennai
+        </p>
+
+        <p>2021 – 2024</p>
+
+      </div>
+
+
+      <div class="edu-card">
+
+        <h3>HSC</h3>
+
+        <p>
+          Lamech Higher Secondary School, Chennai
+        </p>
+
+        <p>2020 – 2021</p>
+
+      </div>
+
+
+      <div class="edu-card">
+
+        <h3>SSLC</h3>
+
+        <p>
+          Sre Sasstha Matric. Hr. Sec. School
+        </p>
+
+        <p>2018 – 2019</p>
+
+      </div>
+
     </div>
 
-    <div class="chat-messages" id="chatMessages">
+  </section>
 
-        <div class="message bot">
-            Hi! 👋 I'm Lokesh's portfolio assistant.
-            Ask me about his skills, education, projects
-            or experience.
+
+  <!-- CERTIFICATIONS -->
+  <section>
+
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="education">
+
+      <div class="cert-card">
+
+        <h3>Cybersecurity Analyst Job Simulation</h3>
+
+        <p>
+          Tata — Forage
+        </p>
+
+      </div>
+
+
+      <div class="cert-card">
+
+        <h3>Master in Software Application</h3>
+
+        <p>
+          Apollo Computer Education Ltd. — Grade A+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact">
+
+      <p>
+        Email:
+        <a href="mailto:lokeshmsc314@gmail.com">
+          lokeshmsc314@gmail.com
+        </a>
+      </p>
+
+      <p>
+        GitHub:
+        <a href="https://github.com/lokesh-003-pro"
+           target="_blank">
+          github.com/lokesh-003-pro
+        </a>
+      </p>
+
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/lokesh-b-4785063b1/"
+           target="_blank">
+          LinkedIn Profile
+        </a>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CHATBOT -->
+  <div class="chatbot">
+
+    <div class="chat-box" id="chatBox">
+
+      <div class="chat-header">
+
+        <span>🤖 Ask Lokesh AI</span>
+
+        <button onclick="toggleChat()">×</button>
+
+      </div>
+
+
+      <div class="chat-messages" id="chatMessages">
+
+        <div class="message bot-message">
+          Hi! 👋 I'm Lokesh's AI portfolio assistant.
+          Ask me about Lokesh's skills, education, projects or experience.
         </div>
 
-    </div>
+      </div>
 
-    <div class="chat-input">
+
+      <div class="chat-input">
 
         <input
-            type="text"
-            id="chatInput"
-            placeholder="Ask something..."
-            onkeydown="if(event.key==='Enter') sendMessage()"
+          type="text"
+          id="userInput"
+          placeholder="Ask something about Lokesh..."
+          onkeydown="handleKey(event)"
         >
 
         <button onclick="sendMessage()">
-            ➤
+          Send
         </button>
+
+      </div>
 
     </div>
 
-</div>
+
+    <button class="chat-button" onclick="toggleChat()">
+      🤖
+    </button>
+
+  </div>
 
 
-<button class="chat-button" onclick="toggleChat()">
-    🤖
-</button>
-
-
-<footer>
+  <!-- FOOTER -->
+  <footer>
 
     © 2026 B. Lokesh | Software Developer
 
-</footer>
+  </footer>
 
 
-<script>
+  <!-- AI CHATBOT JAVASCRIPT -->
+  <script>
 
-function toggleChat(){
-
-    const chat = document.getElementById("chatBox");
-
-    if(chat.style.display === "flex"){
-        chat.style.display = "none";
-    }
-    else{
-        chat.style.display = "flex";
-    }
-
-}
+    const API_URL =
+      "https://lokesh-ai-portfolio-6h15.vercel.app/api/chat";
 
 
-function sendMessage(){
+    function toggleChat() {
 
-    const input = document.getElementById("chatInput");
+      const chatBox =
+        document.getElementById("chatBox");
 
-    const message = input.value.trim();
+      if (chatBox.style.display === "block") {
 
-    if(message === "") return;
+        chatBox.style.display = "none";
 
-    addMessage(message,"user");
+      } else {
 
-    input.value = "";
+        chatBox.style.display = "block";
 
-    const question = message.toLowerCase();
+        document
+          .getElementById("userInput")
+          .focus();
 
-    let answer = "";
-
-
-    if(
-        question.includes("skill") ||
-        question.includes("technology") ||
-        question.includes("know")
-    ){
-
-        answer =
-        "Lokesh's technical skills include Python, C, C++, Core Java, Advanced Java, HTML, CSS, JavaScript, JSP, J2EE, SQL, MySQL and Machine Learning.";
+      }
 
     }
 
 
-    else if(
-        question.includes("education") ||
-        question.includes("degree") ||
-        question.includes("study")
-    ){
+    function handleKey(event) {
 
-        answer =
-        "Lokesh completed M.Sc. Computer Science at St. Thomas College of Arts & Science, Chennai. He also completed B.Sc. Computer Science from the same college.";
+      if (event.key === "Enter") {
 
-    }
+        sendMessage();
 
-
-    else if(
-        question.includes("project") ||
-        question.includes("projects")
-    ){
-
-        answer =
-        "Lokesh has worked on Student Database Management System, AI-Based Weather Simulation and Student Salary Prediction.";
+      }
 
     }
 
 
-    else if(
-        question.includes("weather")
-    ){
+    function addMessage(text, type) {
 
-        answer =
-        "Lokesh worked on an AI-Based Weather Simulation project using Python, Machine Learning, Linear Regression and Isolation Forest for prediction and anomaly detection.";
-
-    }
-
-
-    else if(
-        question.includes("salary")
-    ){
-
-        answer =
-        "Lokesh worked on a Student Salary Prediction machine learning project using Python and data preprocessing and machine learning techniques.";
-
-    }
-
-
-    else if(
-        question.includes("github")
-    ){
-
-        answer =
-        "You can find Lokesh's GitHub profile at github.com/lokesh-003-pro";
-
-    }
-
-
-    else if(
-        question.includes("linkedin")
-    ){
-
-        answer =
-        "You can connect with Lokesh on LinkedIn through his profile linked in this portfolio.";
-
-    }
-
-
-    else if(
-        question.includes("resume") ||
-        question.includes("cv")
-    ){
-
-        answer =
-        "You can view Lokesh's latest resume using the View Resume button on this website.";
-
-    }
-
-
-    else if(
-        question.includes("who") ||
-        question.includes("about")
-    ){
-
-        answer =
-        "Lokesh is an M.Sc. Computer Science graduate and aspiring Software Developer from Chennai, with skills in Python, Java, web technologies, databases and machine learning.";
-
-    }
-
-
-    else if(
-        question.includes("contact") ||
-        question.includes("email")
-    ){
-
-        answer =
-        "You can contact Lokesh at lokeshmsc314@gmail.com.";
-
-    }
-
-
-    else{
-
-        answer =
-        "I can answer questions about Lokesh's skills, education, projects, certifications, resume and contact details.";
-
-    }
-
-
-    setTimeout(function(){
-
-        addMessage(answer,"bot");
-
-    },500);
-
-}
-
-
-function addMessage(text,type){
-
-    const messages =
+      const messages =
         document.getElementById("chatMessages");
 
-    const div =
+      const message =
         document.createElement("div");
 
-    div.className =
+      message.className =
         "message " + type;
 
-    div.textContent = text;
+      message.textContent = text;
 
-    messages.appendChild(div);
+      messages.appendChild(message);
 
-    messages.scrollTop =
+      messages.scrollTop =
         messages.scrollHeight;
 
-}
+    }
 
-</script>
+
+    async function sendMessage() {
+
+      const input =
+        document.getElementById("userInput");
+
+      const message =
+        input.value.trim();
+
+      if (!message) {
+        return;
+      }
+
+
+      // Show user's message
+      addMessage(
+        message,
+        "user-message"
+      );
+
+
+      input.value = "";
+
+
+      // Temporary loading message
+      addMessage(
+        "Thinking... 🤔",
+        "bot-message"
+      );
+
+
+      const messages =
+        document.getElementById("chatMessages");
+
+      const loadingMessage =
+        messages.lastElementChild;
+
+
+      try {
+
+        const response =
+          await fetch(API_URL, {
+
+            method: "POST",
+
+            headers: {
+              "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+              message: message
+            })
+
+          });
+
+
+        const data =
+          await response.json();
+
+
+        // Remove Thinking message
+        loadingMessage.remove();
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            data.error ||
+            "Something went wrong."
+          );
+
+        }
+
+
+        addMessage(
+          data.answer ||
+          "Sorry, I couldn't generate an answer.",
+          "bot-message"
+        );
+
+
+      } catch (error) {
+
+        console.error(error);
+
+        loadingMessage.remove();
+
+        addMessage(
+          "Sorry, I'm unable to connect to the AI right now. Please try again.",
+          "bot-message"
+        );
+
+      }
+
+    }
+
+  </script>
 
 </body>
 </html>
