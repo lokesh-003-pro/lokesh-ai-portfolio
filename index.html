@@ -7,6 +7,7 @@
 <title>B. Lokesh | Software Developer</title>
 
 <style>
+
 * {
     margin: 0;
     padding: 0;
@@ -21,12 +22,14 @@ body {
     line-height: 1.6;
 }
 
+/* NAVIGATION */
+
 nav {
     position: fixed;
     top: 0;
     width: 100%;
     padding: 18px 8%;
-    background: rgba(7,17,31,0.92);
+    background: rgba(7,17,31,0.95);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -54,9 +57,13 @@ nav a:hover {
     color: #00d9ff;
 }
 
+/* SECTIONS */
+
 section {
     padding: 100px 8%;
 }
+
+/* HERO */
 
 .hero {
     min-height: 100vh;
@@ -92,6 +99,8 @@ section {
     font-size: 18px;
 }
 
+/* BUTTONS */
+
 .buttons {
     margin-top: 30px;
 }
@@ -116,18 +125,32 @@ section {
     color: #00d9ff;
 }
 
+.secondary:hover {
+    background: #00d9ff;
+    color: #031019;
+}
+
+/* PROFILE PHOTO */
+
 .profile {
     width: 280px;
     height: 280px;
+    min-width: 280px;
     border-radius: 50%;
     border: 4px solid #00d9ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
     background: #10243a;
-    font-size: 80px;
     box-shadow: 0 0 50px rgba(0,217,255,.25);
 }
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* TITLES */
 
 .title {
     text-align: center;
@@ -139,6 +162,8 @@ section {
     color: #00d9ff;
 }
 
+/* ABOUT */
+
 .about {
     max-width: 900px;
     margin: auto;
@@ -146,6 +171,8 @@ section {
     color: #b7c4d6;
     font-size: 18px;
 }
+
+/* CARDS */
 
 .cards {
     display: grid;
@@ -173,7 +200,10 @@ section {
 
 .card p {
     color: #aab7c8;
+    margin-bottom: 10px;
 }
+
+/* SKILLS */
 
 .skills {
     display: flex;
@@ -189,6 +219,8 @@ section {
     border: 1px solid #1d4059;
     color: #d9f8ff;
 }
+
+/* EDUCATION */
 
 .timeline {
     max-width: 850px;
@@ -211,6 +243,8 @@ section {
     color: #b7c4d6;
 }
 
+/* CONTACT */
+
 .contact {
     text-align: center;
 }
@@ -219,6 +253,8 @@ section {
     color: #b7c4d6;
     margin: 10px;
 }
+
+/* FOOTER */
 
 footer {
     text-align: center;
@@ -307,6 +343,8 @@ footer {
     cursor: pointer;
 }
 
+/* MOBILE */
+
 @media(max-width: 750px) {
 
     nav {
@@ -329,20 +367,26 @@ footer {
     .profile {
         width: 210px;
         height: 210px;
-        font-size: 60px;
+        min-width: 210px;
     }
 
     .title {
         font-size: 32px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
-    <div class="logo">Lokesh<span>.</span></div>
+
+    <div class="logo">
+        Lokesh<span>.</span>
+    </div>
 
     <div>
         <a href="#about">About</a>
@@ -351,7 +395,9 @@ footer {
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
     </div>
+
 </nav>
+
 
 <!-- HERO -->
 
@@ -359,9 +405,13 @@ footer {
 
     <div class="hero-text">
 
-        <h1>Hi, I'm <span>Lokesh</span></h1>
+        <h1>
+            Hi, I'm <span>Lokesh</span>
+        </h1>
 
-        <h2>Software Developer</h2>
+        <h2>
+            Software Developer
+        </h2>
 
         <p>
             M.Sc. Computer Science graduate passionate about
@@ -371,29 +421,34 @@ footer {
 
         <div class="buttons">
 
-            <a class="btn primary"
-               href="#projects">
-               View My Projects
+            <a class="btn primary" href="#projects">
+                View My Projects
             </a>
 
             <a class="btn secondary"
                href="https://github.com/lokesh-003-pro"
                target="_blank">
-               GitHub
+                GitHub
             </a>
 
             <a class="btn secondary"
                href="https://www.linkedin.com/in/lokesh-b-4785063b1/"
                target="_blank">
-               LinkedIn
+                LinkedIn
             </a>
 
         </div>
 
     </div>
 
+
+    <!-- YOUR PHOTO -->
+
     <div class="profile">
-        LB
+
+        <img src="profile.jpg"
+             alt="B. Lokesh">
+
     </div>
 
 </section>
@@ -408,15 +463,19 @@ footer {
     </h2>
 
     <p class="about">
+
         I am B. Lokesh, an M.Sc. Computer Science graduate
-        based in Chennai, India. I have a strong academic
-        background and hands-on experience in Python,
-        database management and web technologies.
+        based in Chennai, India.
+
+        I have a strong academic background and hands-on
+        experience in Python, database management and
+        web technologies.
 
         I am seeking an entry-level software development
         opportunity where I can apply my technical skills,
         learn emerging technologies and contribute to
         organizational growth.
+
     </p>
 
 </section>
@@ -465,7 +524,9 @@ footer {
 
         <div class="card">
 
-            <h3>Student Database Management System</h3>
+            <h3>
+                Student Database Management System
+            </h3>
 
             <p>
                 A web-based system for managing student
@@ -483,7 +544,9 @@ footer {
 
         <div class="card">
 
-            <h3>AI-Based Weather Simulation</h3>
+            <h3>
+                AI-Based Weather Simulation
+            </h3>
 
             <p>
                 A machine-learning based weather prediction
@@ -503,7 +566,9 @@ footer {
 
         <div class="card">
 
-            <h3>Student Salary Prediction</h3>
+            <h3>
+                Student Salary Prediction
+            </h3>
 
             <p>
                 A machine-learning project designed to
@@ -535,55 +600,71 @@ footer {
 
         <div class="timeline-item">
 
-            <h3>M.Sc. Computer Science</h3>
+            <h3>
+                M.Sc. Computer Science
+            </h3>
 
             <p>
                 St. Thomas College of Arts & Science,
                 Chennai
             </p>
 
-            <p>2024 – 2026</p>
+            <p>
+                2024 – 2026
+            </p>
 
         </div>
 
 
         <div class="timeline-item">
 
-            <h3>B.Sc. Computer Science</h3>
+            <h3>
+                B.Sc. Computer Science
+            </h3>
 
             <p>
                 St. Thomas College of Arts & Science,
                 Chennai
             </p>
 
-            <p>2021 – 2024</p>
+            <p>
+                2021 – 2024
+            </p>
 
         </div>
 
 
         <div class="timeline-item">
 
-            <h3>Higher Secondary (HSC)</h3>
+            <h3>
+                Higher Secondary (HSC)
+            </h3>
 
             <p>
                 Lamech Higher Secondary School,
                 Chennai
             </p>
 
-            <p>2020 – 2021</p>
+            <p>
+                2020 – 2021
+            </p>
 
         </div>
 
 
         <div class="timeline-item">
 
-            <h3>SSLC</h3>
+            <h3>
+                SSLC
+            </h3>
 
             <p>
                 Sre Sasstha Matric. Hr. Sec. School
             </p>
 
-            <p>2018 – 2019</p>
+            <p>
+                2018 – 2019
+            </p>
 
         </div>
 
@@ -604,7 +685,9 @@ footer {
 
         <div class="card">
 
-            <h3>Cybersecurity Analyst Job Simulation</h3>
+            <h3>
+                Cybersecurity Analyst Job Simulation
+            </h3>
 
             <p>
                 Tata — Forage
@@ -620,7 +703,9 @@ footer {
 
         <div class="card">
 
-            <h3>Master in Software Application</h3>
+            <h3>
+                Master in Software Application
+            </h3>
 
             <p>
                 Apollo Computer Education Ltd.
@@ -645,33 +730,39 @@ footer {
         Get In <span>Touch</span>
     </h2>
 
-    <p>📍 Chennai, India</p>
+    <p>
+        📍 Chennai, India
+    </p>
 
-    <p>✉ lokeshmsc314@gmail.com</p>
+    <p>
+        ✉ lokeshmsc314@gmail.com
+    </p>
 
     <div class="buttons">
 
         <a class="btn primary"
            href="mailto:lokeshmsc314@gmail.com">
-           Email Me
+            Email Me
         </a>
 
         <a class="btn secondary"
            href="https://github.com/lokesh-003-pro"
            target="_blank">
-           GitHub
+            GitHub
         </a>
 
         <a class="btn secondary"
            href="https://www.linkedin.com/in/lokesh-b-4785063b1/"
            target="_blank">
-           LinkedIn
+            LinkedIn
         </a>
 
     </div>
 
 </section>
 
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -680,11 +771,17 @@ footer {
 </footer>
 
 
-<!-- CHATBOT -->
+<!-- CHATBOT BUTTON -->
 
-<button class="chat-button" onclick="toggleChat()">
+<button class="chat-button"
+        onclick="toggleChat()">
+
     🤖
+
 </button>
+
+
+<!-- CHATBOX -->
 
 <div class="chatbox" id="chatbox">
 
@@ -695,9 +792,12 @@ footer {
     <div class="chat-messages" id="messages">
 
         <div class="message">
+
             Hi! I'm Lokesh's AI assistant.
-            Ask me about his education, skills,
-            projects or experience.
+
+            Ask me about his education,
+            skills, projects or experience.
+
         </div>
 
     </div>
@@ -723,12 +823,17 @@ footer {
 
 function toggleChat() {
 
-    const chat = document.getElementById("chatbox");
+    const chat =
+        document.getElementById("chatbox");
 
     if (chat.style.display === "block") {
+
         chat.style.display = "none";
+
     } else {
+
         chat.style.display = "block";
+
     }
 
 }
@@ -736,74 +841,141 @@ function toggleChat() {
 
 function askQuestion() {
 
-    const input = document.getElementById("question");
-    const messages = document.getElementById("messages");
+    const input =
+        document.getElementById("question");
 
-    const question = input.value.trim();
+    const messages =
+        document.getElementById("messages");
+
+    const question =
+        input.value.trim();
 
     if (!question) return;
 
 
-    const userMessage = document.createElement("div");
+    /* USER MESSAGE */
 
-    userMessage.className = "message user";
+    const userMessage =
+        document.createElement("div");
 
-    userMessage.textContent = question;
+    userMessage.className =
+        "message user";
+
+    userMessage.textContent =
+        question;
 
     messages.appendChild(userMessage);
 
 
     let answer = "";
 
+    const q =
+        question.toLowerCase();
 
-    const q = question.toLowerCase();
 
+    /* EDUCATION */
 
-    if (q.includes("education") ||
+    if (
+        q.includes("education") ||
         q.includes("degree") ||
-        q.includes("study")) {
+        q.includes("study")
+    ) {
 
         answer =
         "Lokesh has completed M.Sc. Computer Science at St. Thomas College of Arts & Science, Chennai. He also completed B.Sc. Computer Science.";
 
     }
 
-    else if (q.includes("skill") ||
-             q.includes("programming") ||
-             q.includes("language")) {
+
+    /* SKILLS */
+
+    else if (
+        q.includes("skill") ||
+        q.includes("programming") ||
+        q.includes("language")
+    ) {
 
         answer =
         "Lokesh's technical skills include Python, C, C++, Core Java, Advanced Java, HTML, CSS, JavaScript, JSP, J2EE, SQL and MySQL.";
 
     }
 
-    else if (q.includes("project")) {
+
+    /* PROJECTS */
+
+    else if (
+        q.includes("project")
+    ) {
 
         answer =
         "Lokesh has worked on Student Database Management System, AI-Based Weather Simulation and Student Salary Prediction.";
 
     }
 
-    else if (q.includes("weather")) {
+
+    /* WEATHER */
+
+    else if (
+        q.includes("weather")
+    ) {
 
         answer =
         "His AI-Based Weather Simulation project uses Python, Machine Learning, Linear Regression and Isolation Forest for prediction and anomaly detection.";
 
     }
 
-    else if (q.includes("salary")) {
+
+    /* SALARY */
+
+    else if (
+        q.includes("salary")
+    ) {
 
         answer =
         "His Student Salary Prediction project uses Machine Learning to predict salary from relevant input features.";
 
     }
 
-    else if (q.includes("github")) {
+
+    /* GITHUB */
+
+    else if (
+        q.includes("github")
+    ) {
 
         answer =
         "You can find Lokesh's projects on his GitHub profile.";
 
     }
+
+
+    /* CERTIFICATIONS */
+
+    else if (
+        q.includes("certification") ||
+        q.includes("certificate")
+    ) {
+
+        answer =
+        "Lokesh has certifications in Cybersecurity Analyst Job Simulation from Tata on Forage and Master in Software Application from Apollo Computer Education Ltd.";
+
+    }
+
+
+    /* CONTACT */
+
+    else if (
+        q.includes("contact") ||
+        q.includes("email")
+    ) {
+
+        answer =
+        "You can contact Lokesh through his email: lokeshmsc314@gmail.com";
+
+    }
+
+
+    /* DEFAULT */
 
     else {
 
@@ -813,17 +985,23 @@ function askQuestion() {
     }
 
 
+    /* BOT RESPONSE */
+
     setTimeout(function() {
 
-        const botMessage = document.createElement("div");
+        const botMessage =
+            document.createElement("div");
 
-        botMessage.className = "message";
+        botMessage.className =
+            "message";
 
-        botMessage.textContent = answer;
+        botMessage.textContent =
+            answer;
 
         messages.appendChild(botMessage);
 
-        messages.scrollTop = messages.scrollHeight;
+        messages.scrollTop =
+            messages.scrollHeight;
 
     }, 500);
 
